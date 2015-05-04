@@ -55,6 +55,6 @@ w.addTile(someTileBytes, 0, 0, 0);
 File result = w.close();
 ```
 
-### Maven
+## Maven
 
 .... files are working their way through Nexus, coordinates will be here soon! - CKC
