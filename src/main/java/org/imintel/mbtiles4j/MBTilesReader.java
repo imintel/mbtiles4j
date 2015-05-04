@@ -3,7 +3,6 @@ package org.imintel.mbtiles4j;
 import org.imintel.mbtiles4j.model.MetadataEntry;
 
 import java.io.File;
-import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -55,26 +54,4 @@ public class MBTilesReader {
             throw new MBTilesReadException("Access Tiles failed", e);
         }
     }
-
-    public static void main(String[] args) throws Exception {
-        MBTilesReader r = new MBTilesReader(new File("/Users/ckcook/Downloads/control-room-0.2.0.mbtiles"));
-        MetadataEntry metadata = r.getMetadata();
-        String tileSetName = metadata.getTilesetName();
-        MetadataEntry.TileSetType type = metadata.getTilesetType();
-        String tilesetVersion = metadata.getTilesetVersion();
-        String description = metadata.getTilesetDescription();
-        MetadataEntry.TileMimeType tileMimeType = metadata.getTileMimeType();
-        MetadataEntry.MetadataBounds bounds = metadata.getTilesetBounds();
-        String attribution = metadata.getAttribution();
-        TileIterator tiles = r.getTiles();
-        while (tiles.hasNext()) {
-            TileIterator.Tile next = tiles.next();
-            int zoom = next.getZoom();
-            int column = next.getColumn();
-            int row = next.getRow();
-            InputStream tileData = next.getData();
-        }
-        tiles.close();
-    }
-
 }

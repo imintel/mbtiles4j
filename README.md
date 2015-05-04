@@ -27,4 +27,24 @@ while (tiles.hasNext()) {
 	InputStream tileData = next.getData();        
 }
 tiles.close();
+r.close();
+```
+
+### Writing `.mbtiles`
+
+```java
+MBTilesWriter w = new MBTilesWriter(new File("example.mbtiles"));
+MetadataEntry ent = new MetadataEntry();
+//Add metadata parts
+ent.setTilesetName("An example Tileset")
+	.setTilesetType(MetadataEntry.TileSetType.BASE_LAYER)
+	.setTilesetVersion("0.2.0")
+	.setTilesetDescription("An example tileset description")
+	.setTileMimeType(MetadataEntry.TileMimeType.PNG)
+	.setAttribution("Tiles are Open Source!")
+	.setTilesetBounds(-180, -85, 180, 85);
+w.addMetadataEntry(ent);
+//add someTile at Zoom (0), Column(0), Row (0)
+w.addTile(someTileBytes, 0, 0, 0);
+File result = w.close();
 ```
