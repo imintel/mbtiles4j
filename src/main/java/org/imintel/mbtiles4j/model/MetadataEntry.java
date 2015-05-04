@@ -336,7 +336,7 @@ public class MetadataEntry {
     }
 
 
-    enum TileMimeType {
+    public enum TileMimeType {
         PNG,
         JPG;
 
@@ -355,7 +355,7 @@ public class MetadataEntry {
         }
     }
 
-    enum TileSetType {
+    public enum TileSetType {
         OVERLAY("overlay"),
         BASE_LAYER("baselayer");
 
@@ -380,7 +380,7 @@ public class MetadataEntry {
         }
     }
 
-    class MetadataBounds {
+    public class MetadataBounds {
         private double left;
         private double bottom;
         private double right;
