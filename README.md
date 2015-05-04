@@ -1,10 +1,13 @@
 # mbtiles4j
 A pure-java reader/writer for [MBTiles](https://github.com/mapbox/mbtiles-spec/blob/master/1.2/spec.md)
 
+### About MBTiles
 
-## Illustrative Examples
+MBTiles is a MapBox specification for storing large collections of tiles in a single tileset. Each mbtiles file  is a sqlite instance with metadata and tiles.
 
-### Reading `.mbtiles`
+### Illustrative Examples
+
+#### Reading `.mbtiles`
 
 ```java
 MBTilesReader r = new MBTilesReader(new File("control-room-0.2.0.mbtiles"));
@@ -30,7 +33,7 @@ tiles.close();
 r.close();
 ```
 
-### Writing `.mbtiles`
+#### Writing `.mbtiles`
 
 ```java
 MBTilesWriter w = new MBTilesWriter(new File("example.mbtiles"));
