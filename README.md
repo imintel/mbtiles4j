@@ -8,7 +8,7 @@ A pure-java reader/writer for [MBTiles](https://github.com/mapbox/mbtiles-spec/b
 
 MBTiles is a MapBox specification for storing large collections of tiles in a single tileset. Each mbtiles file  is a sqlite instance with metadata and tiles.
 
-## Maven
+### Maven
 
 ```xml
 <dependency>
