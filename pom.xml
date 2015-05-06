@@ -6,9 +6,10 @@
 
     <groupId>org.imintel</groupId>
     <artifactId>mbtiles4j</artifactId>
-    <version>1.0</version>
+    <version>1.0.3</version>
     <name>MB Tiles for Java</name>
-
+    <url>http://www.github.com/imintel</url>
+    <description>A reader/writer for MBTiles</description>
     <organization>
         <name>Institute for Modern Intelligence</name>
         <url>http://imintel.org</url>
@@ -20,7 +21,7 @@
     </properties>
     <distributionManagement>
         <repository>
-            <id>bintray-ckcook-maven-mbtiles4j</id>
+            <id>bintray</id>
             <name>ckcook-maven-mbtiles4j</name>
             <url>https://api.bintray.com/maven/ckcook/maven/mbtiles4j</url>
         </repository>
@@ -30,6 +31,25 @@
         <url>scm:git:git@github.com:imintel/mbtiles4j.git</url>
         <developerConnection>scm:git:git@github.com:imintel/mbtiles4j.git</developerConnection>
     </scm>
+    <developers>
+        <developer>
+            <id>ckcook</id>
+            <name>Cam Cook</name>
+            <email>ckcook@missionfocus.com</email>
+            <url>http://www.github.com/ccook</url>
+            <roles>
+                <role>developer</role>
+            </roles>
+        </developer>
+    </developers>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+            <comments>A business-friendly OSS license</comments>
+        </license>
+    </licenses>
     <dependencies>
         <dependency>
             <groupId>org.xerial</groupId>
@@ -88,7 +108,7 @@
                 <executions>
                     <execution>
                         <id>sign-artifacts</id>
-                        <phase>deploy</phase>
+                        <phase>install</phase>
                         <goals>
                             <goal>sign</goal>
                         </goals>
