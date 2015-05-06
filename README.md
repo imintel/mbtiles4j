@@ -57,4 +57,10 @@ File result = w.close();
 
 ## Maven
 
-.... files are working their way through Nexus, coordinates will be here soon! - CKC
+```xml
+<dependency>
+   <groupId>org.imintel</groupId>
+   <artifactId>mbtiles4j</artifactId>
+   <version>1.0.3</version>
+</dependency>
+```
