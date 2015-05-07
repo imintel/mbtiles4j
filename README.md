@@ -14,7 +14,7 @@ MBTiles is a MapBox specification for storing large collections of tiles in a si
 <dependency>
    <groupId>org.imintel</groupId>
    <artifactId>mbtiles4j</artifactId>
-   <version>1.0.3</version>
+   <version>1.0.4</version>
 </dependency>
 ```
 

@@ -6,7 +6,7 @@
 
     <groupId>org.imintel</groupId>
     <artifactId>mbtiles4j</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <name>MB Tiles for Java</name>
     <url>http://www.github.com/imintel</url>
     <description>A reader/writer for MBTiles</description>
