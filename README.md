@@ -1,6 +1,6 @@
 # mbtiles4j
 
-![](https://travis-ci.org/imintel/mbtiles4j.svg?branch=master)
+[![](https://travis-ci.org/imintel/mbtiles4j.svg?branch=master)](https://travis-ci.org/imintel/mbtiles4j)
 
 A pure-java reader/writer for [MBTiles](https://github.com/mapbox/mbtiles-spec/blob/master/1.2/spec.md)
 
@@ -8,7 +8,7 @@ A pure-java reader/writer for [MBTiles](https://github.com/mapbox/mbtiles-spec/b
 
 MBTiles is a MapBox specification for storing large collections of tiles in a single tileset. Each mbtiles file  is a sqlite instance with metadata and tiles.
 
-## Maven
+### Maven
 
 ```xml
 <dependency>
