@@ -102,7 +102,7 @@ public class MBTilesWriter {
         }
     }
 
-    private void addTile(byte[] bytes, long zoom, long column, long row) throws MBTilesWriteException {
+    public void addTile(byte[] bytes, long zoom, long column, long row) throws MBTilesWriteException {
         try {
             SQLHelper.addTile(connection, bytes, zoom, column, row);
         } catch (MBTilesException e) {

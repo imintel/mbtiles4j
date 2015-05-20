@@ -1,6 +1,5 @@
 package org.imintel.mbtiles4j;
 
-import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.sql.*;
 
@@ -75,7 +74,7 @@ public class SQLHelper {
             stmt.setInt(1, (int) zoom);
             stmt.setInt(2, (int) column);
             stmt.setInt(3, (int) row);
-            stmt.setBlob(4, new ByteArrayInputStream(bytes), bytes.length);
+            stmt.setBytes(4, bytes);
             stmt.execute();
             stmt.close();
         } catch (SQLException e) {
