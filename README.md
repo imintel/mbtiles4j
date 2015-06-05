@@ -1,7 +1,5 @@
 # mbtiles4j
 
-[![](https://travis-ci.org/imintel/mbtiles4j.svg?branch=master)](https://travis-ci.org/imintel/mbtiles4j)
-
 A pure-java reader/writer for [MBTiles](https://github.com/mapbox/mbtiles-spec/blob/master/1.2/spec.md)
 
 ### About MBTiles
