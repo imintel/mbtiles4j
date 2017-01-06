@@ -2,6 +2,8 @@
 
 A pure-java reader/writer for [MBTiles](https://github.com/mapbox/mbtiles-spec/blob/master/1.2/spec.md)
 
+If you need it for Android, [check out this fork](https://github.com/fullhdpixel/mbtiles4j).
+
 ### About MBTiles
 
 MBTiles is a MapBox specification for storing large collections of tiles in a single tileset. Each mbtiles file  is a sqlite instance with metadata and tiles.
