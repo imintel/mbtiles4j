@@ -6,10 +6,7 @@ import static org.junit.Assert.assertNotNull;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -70,7 +67,7 @@ public class MBTileReaderTest {
     @Test (expected=MBTilesReadException.class)
     public void getNonExistingTile() throws Exception{
     	MBTilesReader reader = new MBTilesReader(f);
-    	Tile tile = reader.getTile(20, 0, 0);
+    	reader.getTile(20, 0, 0);
     }
     
     /**

@@ -1,15 +1,10 @@
 package org.imintel.mbtiles4j;
 
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
 import java.io.File;
-import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-import javax.imageio.ImageIO;
 
 import org.imintel.mbtiles4j.model.MetadataEntry;
 
