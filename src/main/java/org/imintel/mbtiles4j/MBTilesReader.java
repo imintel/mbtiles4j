@@ -60,4 +60,18 @@ public class MBTilesReader {
             throw new MBTilesReadException("Access Tiles failed", e);
         }
     }
+    
+    public Tile getTile(int zoom, int column, int row) throws MBTilesReadException {
+    	String sql = String.format("SELECT tile_data FROM tiles WHERE zoom_level = %d AND tile_column = %d AND tile_row = %d", zoom, column, row);
+    	
+    	try {
+			ResultSet resultSet = SQLHelper.executeQuery(connection, sql);
+			InputStream tileDataInputStream = null;
+			tileDataInputStream = resultSet.getBinaryStream("tile_data");
+
+            return new Tile(zoom, column, row, tileDataInputStream);
+		} catch (MBTilesException | SQLException e) {
+			throw new MBTilesReadException(String.format("Could not get Tile for z:%d, column:%d, row:%d", zoom, column, row), e);
+		}
+    }
 }
