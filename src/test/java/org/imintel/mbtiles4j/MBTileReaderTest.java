@@ -45,10 +45,10 @@ public class MBTileReaderTest {
     	InputStream is = tile.getData();
     	
     	File referenceImage = new File("src/test/resources/test.png");
-    	String checksumRefrenceFile = getChecksum(Files.newInputStream(referenceImage.toPath()));
+    	String checksumReferenceFile = getChecksum(Files.newInputStream(referenceImage.toPath()));
     	String tileChecksum = getChecksum(is);
     	
-    	assertEquals(checksumRefrenceFile, tileChecksum);
+    	assertEquals(checksumReferenceFile, tileChecksum);
     }
     
     @Test (expected=MBTilesReadException.class)
