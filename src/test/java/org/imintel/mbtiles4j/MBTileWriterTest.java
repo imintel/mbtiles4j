@@ -21,7 +21,7 @@ public class MBTileWriterTest {
         writer.addMetadataEntry(metadata);
         TileIterator tiles = reader.getTiles();
         while (tiles.hasNext()) {
-            TileIterator.Tile next = tiles.next();
+            Tile next = tiles.next();
             writer.addTile(next.getData(), next.getZoom(), next.getColumn(), next.getRow());
         }
         tiles.close();
@@ -38,7 +38,7 @@ public class MBTileWriterTest {
         assertEquals(metadata.getAttribution(), "");
         tiles = reader.getTiles();
         while (tiles.hasNext()) {
-            TileIterator.Tile next = tiles.next();
+            Tile next = tiles.next();
             assertNotNull(next.getData());
         }
         tiles.close();
