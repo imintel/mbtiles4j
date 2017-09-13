@@ -49,19 +49,6 @@ public class MBTileReaderTest {
     	String tileChecksum = getChecksum(is);
     	
     	assertEquals(checksumRefrenceFile, tileChecksum);
-    	
-    	
-//    	Path path = Paths.get("c:\\users\\mv\\test.png");
-//    	OutputStream os = Files.newOutputStream(path);
-//    	byte[] b = new byte[2048];
-//		int length;
-//
-//		while ((length = is.read(b)) != -1) {
-//			os.write(b, 0, length);
-//		}
-//		
-//    	os.flush();
-//    	os.close();
     }
     
     @Test (expected=MBTilesReadException.class)
