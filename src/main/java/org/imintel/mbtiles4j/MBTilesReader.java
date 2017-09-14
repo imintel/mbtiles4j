@@ -69,4 +69,26 @@ public class MBTilesReader {
 			throw new MBTilesReadException(String.format("Could not get Tile for z:%d, column:%d, row:%d", zoom, column, row), e);
 		}
     }
+    
+    public int getMaxZoom() throws MBTilesReadException {
+    	String sql = "SELECT MAX(zoom_level) FROM tiles";
+    	
+    	try {
+			ResultSet resultSet = SQLHelper.executeQuery(connection, sql);
+			return resultSet.getInt(1);
+		} catch (MBTilesException | SQLException e) {
+			throw new MBTilesReadException("Could not get max zoom", e);
+		}
+    }
+    
+    public int getMinZoom() throws MBTilesReadException {
+    	String sql = "SELECT MIN(zoom_level) FROM tiles";
+    	
+    	try {
+			ResultSet resultSet = SQLHelper.executeQuery(connection, sql);
+			return resultSet.getInt(1);
+		} catch (MBTilesException | SQLException e) {
+			throw new MBTilesReadException("Could not get min zoom", e);
+		}
+    }
 }

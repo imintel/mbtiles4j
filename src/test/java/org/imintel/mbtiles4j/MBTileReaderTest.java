@@ -57,6 +57,20 @@ public class MBTileReaderTest {
     	reader.getTile(20, 0, 0);
     }
     
+    @Test
+    public void getMaxZoom() throws Exception{
+    	MBTilesReader reader = new MBTilesReader(f);
+    	int maxZoom = reader.getMaxZoom();
+    	assertEquals(2, maxZoom);
+    }
+    
+    @Test
+    public void getMinZoom() throws Exception{
+    	MBTilesReader reader = new MBTilesReader(f);
+    	int minZoom = reader.getMinZoom();
+    	assertEquals(0, minZoom);
+    }
+    
     /**
      * Calculate a SHA-1 hash for the inputStream
      * @param inputStream
