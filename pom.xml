@@ -23,7 +23,7 @@
         <repository>
             <id>bintray</id>
             <name>ckcook-maven-mbtiles4j</name>
-            <url>https://api.bintray.com/maven/ckcook/maven/mbtiles4j</url>
+	    <url>https://api.bintray.com/maven/ckcook/maven/mbtiles4j/;publish=1</url>
         </repository>
     </distributionManagement>
     <scm>
@@ -108,7 +108,7 @@
                 <executions>
                     <execution>
                         <id>sign-artifacts</id>
-                        <phase>deploy</phase>
+                        <phase>install</phase>
                         <goals>
                             <goal>sign</goal>
                         </goals>
