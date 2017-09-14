@@ -6,7 +6,7 @@
 
     <groupId>org.imintel</groupId>
     <artifactId>mbtiles4j</artifactId>
-    <version>1.0.5</version>
+    <version>1.0.6</version>
     <name>MB Tiles for Java</name>
     <url>http://www.github.com/imintel</url>
     <description>A reader/writer for MBTiles</description>
@@ -108,7 +108,7 @@
                 <executions>
                     <execution>
                         <id>sign-artifacts</id>
-                        <phase>install</phase>
+                        <phase>deploy</phase>
                         <goals>
                             <goal>sign</goal>
                         </goals>
