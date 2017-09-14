@@ -1,11 +1,12 @@
 package org.imintel.mbtiles4j;
 
-import org.imintel.mbtiles4j.model.MetadataEntry;
-
 import java.io.File;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import org.imintel.mbtiles4j.model.MetadataEntry;
 
 public class MBTilesReader {
 
@@ -53,5 +54,41 @@ public class MBTilesReader {
         } catch (MBTilesException e) {
             throw new MBTilesReadException("Access Tiles failed", e);
         }
+    }
+    
+    public Tile getTile(int zoom, int column, int row) throws MBTilesReadException {
+    	String sql = String.format("SELECT tile_data FROM tiles WHERE zoom_level = %d AND tile_column = %d AND tile_row = %d", zoom, column, row);
+    	
+    	try {
+			ResultSet resultSet = SQLHelper.executeQuery(connection, sql);
+			InputStream tileDataInputStream = null;
+			tileDataInputStream = resultSet.getBinaryStream("tile_data");
+
+            return new Tile(zoom, column, row, tileDataInputStream);
+		} catch (MBTilesException | SQLException e) {
+			throw new MBTilesReadException(String.format("Could not get Tile for z:%d, column:%d, row:%d", zoom, column, row), e);
+		}
+    }
+    
+    public int getMaxZoom() throws MBTilesReadException {
+    	String sql = "SELECT MAX(zoom_level) FROM tiles";
+    	
+    	try {
+			ResultSet resultSet = SQLHelper.executeQuery(connection, sql);
+			return resultSet.getInt(1);
+		} catch (MBTilesException | SQLException e) {
+			throw new MBTilesReadException("Could not get max zoom", e);
+		}
+    }
+    
+    public int getMinZoom() throws MBTilesReadException {
+    	String sql = "SELECT MIN(zoom_level) FROM tiles";
+    	
+    	try {
+			ResultSet resultSet = SQLHelper.executeQuery(connection, sql);
+			return resultSet.getInt(1);
+		} catch (MBTilesException | SQLException e) {
+			throw new MBTilesReadException("Could not get min zoom", e);
+		}
     }
 }
