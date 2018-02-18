@@ -31,12 +31,12 @@ MetadataEntry.TileSetType type = metadata.getTilesetType();
 String tilesetVersion = metadata.getTilesetVersion();
 String description = metadata.getTilesetDescription();
 MetadataEntry.TileMimeType tileMimeType = metadata.getTileMimeType();
-MetadataEntry.MetadataBounds bounds = metadata.getTilesetBounds();
+MetadataBounds bounds = metadata.getTilesetBounds();
 String attribution = metadata.getAttribution();
 //tiles
 TileIterator tiles = r.getTiles();
 while (tiles.hasNext()) {
-	TileIterator.Tile next = tiles.next();
+	Tile next = tiles.next();
 	int zoom = next.getZoom();
 	int column = next.getColumn();
 	int row = next.getRow();
