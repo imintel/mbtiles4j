@@ -91,4 +91,13 @@ public class MBTilesReader {
 			throw new MBTilesReadException("Could not get min zoom", e);
 		}
     }
+    
+    /**
+     * Expose the Connection object
+     * 
+     * @return the current Connection object
+     */
+    public Connection getConnection() {
+        return connection;
+    }
 }
