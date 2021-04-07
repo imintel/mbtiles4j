@@ -1,8 +1,13 @@
 package org.imintel.mbtiles4j;
 
-import org.imintel.mbtiles4j.model.MetadataBounds;
-import org.imintel.mbtiles4j.model.MetadataEntry;
 import org.junit.Test;
+
+import ch.poole.geo.mbtiles4j.MBTilesReader;
+import ch.poole.geo.mbtiles4j.MBTilesWriter;
+import ch.poole.geo.mbtiles4j.Tile;
+import ch.poole.geo.mbtiles4j.TileIterator;
+import ch.poole.geo.mbtiles4j.model.MetadataBounds;
+import ch.poole.geo.mbtiles4j.model.MetadataEntry;
 
 import java.io.File;
 

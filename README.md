@@ -2,6 +2,8 @@
 
 A pure-java reader/writer for [MBTiles](https://github.com/mapbox/mbtiles-spec/blob/master/1.2/spec.md)
 
+This is a fork of https://github.com/imintel/mbtiles4j that seems to be no longer maintained. 
+
 If you need it for Android, [check out this fork](https://github.com/fullhdpixel/mbtiles4j).
 
 ### About MBTiles
@@ -12,9 +14,9 @@ MBTiles is a MapBox specification for storing large collections of tiles in a si
 
 ```xml
 <dependency>
-   <groupId>org.imintel</groupId>
+   <groupId>ch.poole.geo</groupId>
    <artifactId>mbtiles4j</artifactId>
-   <version>1.0.6</version>
+   <version>1.2.0</version>
 </dependency>
 ```
 

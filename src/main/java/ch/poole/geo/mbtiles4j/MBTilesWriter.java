@@ -16,15 +16,15 @@ KIND, either express or implied.  See the License for the
 specific language governing permissions and limitations
 under the License.
  */
-package org.imintel.mbtiles4j;
-
-import org.imintel.mbtiles4j.model.MetadataEntry;
+package ch.poole.geo.mbtiles4j;
 
 import java.io.*;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Map;
 import java.util.UUID;
+
+import ch.poole.geo.mbtiles4j.model.MetadataEntry;
 
 public class MBTilesWriter {
 

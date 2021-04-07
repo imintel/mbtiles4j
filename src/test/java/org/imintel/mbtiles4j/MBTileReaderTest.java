@@ -10,9 +10,14 @@ import java.nio.file.Files;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-import org.imintel.mbtiles4j.model.MetadataBounds;
-import org.imintel.mbtiles4j.model.MetadataEntry;
 import org.junit.Test;
+
+import ch.poole.geo.mbtiles4j.MBTilesReadException;
+import ch.poole.geo.mbtiles4j.MBTilesReader;
+import ch.poole.geo.mbtiles4j.Tile;
+import ch.poole.geo.mbtiles4j.TileIterator;
+import ch.poole.geo.mbtiles4j.model.MetadataBounds;
+import ch.poole.geo.mbtiles4j.model.MetadataEntry;
 
 public class MBTileReaderTest {
 
