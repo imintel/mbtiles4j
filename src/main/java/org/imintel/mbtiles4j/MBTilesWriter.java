@@ -126,4 +126,13 @@ public class MBTilesWriter {
         return file;
     }
 
+    /**
+     * Expose the Connection object
+     * This is for example useful for turning off auto commit.
+     * 
+     * @return the current Connection object
+     */
+    public Connection getConnection() {
+        return connection;
+    }
 }
